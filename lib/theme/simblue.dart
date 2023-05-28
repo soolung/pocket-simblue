@@ -9,34 +9,33 @@ class SimblueThemeData {
     final base = ThemeData.light();
     return base.copyWith(
       primaryColor: Palette.primary400,
+      scaffoldBackgroundColor: Palette.green200,
       textTheme: _buildSimblueTextTheme(base.textTheme)
           .apply(fontFamily: 'SpoqaHanSansNeo'),
       colorScheme: _buildSimblueColorTheme(base.colorScheme),
-      // ...
-      // textTheme 외에도 appBarTheme, primaryTheme, colorScheme 등 override 할 수 있는 항목 매우 많음
     );
   }
 
   static TextTheme _buildSimblueTextTheme(TextTheme base) {
     return base.copyWith(
       headlineLarge: const TextStyle(
-          fontSize: 32, fontWeight: FontWeight.w500, height: 52),
+          fontSize: 32, fontWeight: FontWeight.w500),
       headlineMedium: const TextStyle(
-          fontSize: 28, fontWeight: FontWeight.w500, height: 36),
+          fontSize: 28, fontWeight: FontWeight.w500),
       headlineSmall: const TextStyle(
-          fontSize: 24, fontWeight: FontWeight.w500, height: 32),
+          fontSize: 24, fontWeight: FontWeight.w500),
       labelLarge: const TextStyle(
-          fontSize: 18, fontWeight: FontWeight.w500, height: 24),
+          fontSize: 18, fontWeight: FontWeight.w500),
       labelMedium: const TextStyle(
-          fontSize: 16, fontWeight: FontWeight.w500, height: 20),
+          fontSize: 16, fontWeight: FontWeight.w500),
       labelSmall: const TextStyle(
-          fontSize: 14, fontWeight: FontWeight.w500, height: 16),
+          fontSize: 14, fontWeight: FontWeight.w500),
       bodyLarge: const TextStyle(
-          fontSize: 18, fontWeight: FontWeight.w400, height: 28),
+          fontSize: 18, fontWeight: FontWeight.w400),
       bodyMedium: const TextStyle(
-          fontSize: 16, fontWeight: FontWeight.w400, height: 24),
+          fontSize: 16, fontWeight: FontWeight.w400),
       bodySmall: const TextStyle(
-          fontSize: 14, fontWeight: FontWeight.w400, height: 20),
+          fontSize: 14, fontWeight: FontWeight.w400),
     );
   }
 
@@ -45,6 +44,7 @@ class SimblueThemeData {
       primary: Palette.primary400,
       error: Palette.red500,
       brightness: Brightness.light,
+      background: Palette.green200,
     );
   }
 }
