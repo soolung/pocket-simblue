@@ -9,7 +9,7 @@ class SimblueThemeData {
     final base = ThemeData.light();
     return base.copyWith(
       primaryColor: Palette.primary400,
-      scaffoldBackgroundColor: Palette.green200,
+      scaffoldBackgroundColor: Palette.gray50,
       textTheme: _buildSimblueTextTheme(base.textTheme)
           .apply(fontFamily: 'SpoqaHanSansNeo'),
       colorScheme: _buildSimblueColorTheme(base.colorScheme),
@@ -44,7 +44,7 @@ class SimblueThemeData {
       primary: Palette.primary400,
       error: Palette.red500,
       brightness: Brightness.light,
-      background: Palette.green200,
+      background: Palette.gray50,
     );
   }
 }

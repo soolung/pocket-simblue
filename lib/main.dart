@@ -5,6 +5,7 @@ import 'package:simblue/screens/record.dart';
 import 'package:simblue/screens/profile.dart';
 import 'package:simblue/shared/colors.dart';
 import 'package:simblue/theme/simblue.dart';
+import 'package:simblue/widgets/logo.dart';
 
 void main() {
   runApp(const MyApp());
@@ -51,7 +52,10 @@ class _BottomNavigationBarExampleState
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('BottomNavigationBar Sample'),
+        backgroundColor: Palette.gray50,
+        elevation: 0,
+        centerTitle: false,
+        title: const Logo(),
       ),
       body: Stack(
         children: [
