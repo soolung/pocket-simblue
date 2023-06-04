@@ -14,26 +14,25 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
         title: 'Flutter Demo',
         theme: SimblueThemeData.lightThemeData,
-        home: const BottomNavigationBarExample());
+        home: const Simblue());
   }
 }
 
-class BottomNavigationBarExample extends StatefulWidget {
-  const BottomNavigationBarExample({super.key});
+class Simblue extends StatefulWidget {
+  const Simblue({super.key});
 
   @override
-  State<BottomNavigationBarExample> createState() =>
-      _BottomNavigationBarExampleState();
+  State<Simblue> createState() =>
+      _SimblueState();
 }
 
-class _BottomNavigationBarExampleState
-    extends State<BottomNavigationBarExample> {
+class _SimblueState
+    extends State<Simblue> {
   int _selectedIndex = 0;
   final List<Widget> _tabList = <Widget>[
     const HomeScreen(),
@@ -55,13 +54,14 @@ class _BottomNavigationBarExampleState
         backgroundColor: Palette.gray50,
         elevation: 0,
         centerTitle: false,
+        titleSpacing: 24,
         title: const Logo(),
       ),
       body: Stack(
         children: [
           _tabList.elementAt(_selectedIndex),
           Padding(
-            padding: const EdgeInsets.all(30.0),
+            padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 30.0),
             child: Align(
                 alignment: const Alignment(0.0, 1.0),
                 child: ClipRRect(

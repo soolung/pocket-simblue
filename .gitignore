@@ -1,3 +1,7 @@
+# fonts
+*.ttf
+*.otf
+
 # Miscellaneous
 *.class
 *.log
