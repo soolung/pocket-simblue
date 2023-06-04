@@ -4,7 +4,7 @@ import 'package:simblue/screens/look.dart';
 import 'package:simblue/screens/record.dart';
 import 'package:simblue/screens/profile.dart';
 import 'package:simblue/shared/colors.dart';
-import 'package:simblue/theme/simblue.dart';
+import 'package:simblue/theme/simblue_theme.dart';
 import 'package:simblue/widgets/logo.dart';
 
 void main() {
