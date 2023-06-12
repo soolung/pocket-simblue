@@ -36,17 +36,13 @@ class ApplicationWidget extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
+                Row(crossAxisAlignment: CrossAxisAlignment.center, children: [
                   Text(emoji,
                       style: Theme.of(context)
                           .textTheme
                           .headlineSmall
                           ?.apply(fontFamily: 'Tossface')),
-                  const SizedBox(
-                    width: 4,
-                  ),
+                  const SizedBox(width: 4),
                   Text(title, style: Theme.of(context).textTheme.headlineSmall),
                 ]),
                 const SizedBox(height: 4),
@@ -57,9 +53,8 @@ class ApplicationWidget extends StatelessWidget {
                         ?.apply(color: Palette.gray600)),
                 const SizedBox(height: 8),
                 Row(
-                  children: generateTags()
-                      .map((e) => TagWidget(tag: e))
-                      .toList(),
+                  children:
+                      generateTags().map((e) => TagWidget(tag: e)).toList(),
                 )
               ],
             )),
