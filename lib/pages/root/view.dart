@@ -6,7 +6,7 @@ import 'package:simblue/pages/profile.dart';
 import 'package:simblue/pages/record.dart';
 import 'package:simblue/pages/root/controller.dart';
 import 'package:simblue/shared/colors.dart';
-import 'package:simblue/widgets/logo.dart';
+import 'package:simblue/widgets/logo_app_bar.dart';
 
 class RootView extends GetView<RootController> {
   RootView({Key? key}) : super(key: key);
@@ -21,13 +21,7 @@ class RootView extends GetView<RootController> {
   @override
   Widget build(BuildContext context) {
     return Obx(() => Scaffold(
-          appBar: AppBar(
-            backgroundColor: Palette.gray50,
-            elevation: 0,
-            centerTitle: false,
-            titleSpacing: 24,
-            title: const Logo(),
-          ),
+          appBar: LogoAppBar(),
           body: Stack(
             children: [
               _tabList.elementAt(controller.selectedIndex.value),

@@ -38,8 +38,9 @@ dependencies:
   flutter_native_splash: ^2.2.19
   carousel_slider: ^4.2.1
   get: ^4.6.5
-  flutter_secure_storage: ^8.0.0
   dio: ^5.2.1
+  flutter_dotenv: ^5.1.0
+  shared_preferences: ^2.1.2
 
 dev_dependencies:
   flutter_test:
