@@ -20,7 +20,7 @@ class AuthApi {
   Future<void> login(String email, String password) async {
     final token = await _login({"email": email, "password": password});
     await tokenManagerProvider.manager.setToken(token);
-    Get.offAllNamed(Routes.home);
+    Get.offAllNamed(Routes.root);
   }
 
   Future<Token> _login(data) async {
