@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:logger/logger.dart';
 import 'package:simblue/interfaces/auth.dart';
 import 'package:simblue/modules/login/controller.dart';
 import 'package:simblue/widgets/shared/logo_app_bar.dart';
@@ -8,8 +7,7 @@ import 'package:simblue/widgets/shared/logo_app_bar.dart';
 import '../../shared/colors.dart';
 
 class LoginPage extends GetView<LoginController> {
-  LoginPage({Key? key}) : super(key: key);
-  var logger = Logger();
+  const LoginPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -24,6 +22,7 @@ class LoginPage extends GetView<LoginController> {
             vertical: 30.0,
           ),
           child: Column(
+
             children: [
               buildIconTextField(
                 context,
@@ -39,11 +38,22 @@ class LoginPage extends GetView<LoginController> {
                 icon: const Icon(Icons.lock_outlined),
                 obscureText: true,
               ),
-              const SizedBox(height: 16.0),
+              const SizedBox(height: 36.0),
               ElevatedButton(
-                onPressed: () => authApi.login(controller.email, controller.password),
-                child: const Text("로그인"),
-              ),
+                  onPressed: () =>
+                      authApi.login(controller.email, controller.password),
+                  style: ElevatedButton.styleFrom(
+                    minimumSize: const Size(double.infinity, 48.0),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                    ),
+                    elevation: 0,
+                  ),
+                  child: Text("로그인",
+                      style: Theme.of(context)
+                          .textTheme
+                          .labelMedium
+                          ?.apply(color: Palette.monoWhite))),
             ],
           ),
         ),

@@ -1,8 +1,9 @@
-import 'package:dio/dio.dart';
 import 'package:simblue/models/token.dart';
+import 'package:get/get.dart';
 
 import '../providers/token_manager.dart';
 import '../utils/dio.dart';
+import '../routes/pages.dart';
 
 AuthApi _authApi = AuthApi();
 
@@ -19,10 +20,11 @@ class AuthApi {
   Future<void> login(String email, String password) async {
     final token = await _login({"email": email, "password": password});
     await tokenManagerProvider.manager.setToken(token);
+    Get.offAllNamed(Routes.home);
   }
 
   Future<Token> _login(data) async {
-    Response response = await dio.post("/auth", data: data);
+    var response = await dio.post("/auth", data: data);
     return Token.fromJson(response.data);
   }
 }
