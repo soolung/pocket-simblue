@@ -52,6 +52,19 @@ class DefaultTokenManager implements TokenManager {
 
   @override
   Future<Token?> getToken() async {
+    if (_currentToken != null) {
+      return _currentToken;
+    }
+
+    _preferences ??= await SharedPreferences.getInstance();
+    var savedAccessToken = _preferences!.getString(accessToken);
+    var savedRefreshToken = _preferences!.getString(refreshToken);
+
+    if (savedAccessToken != null && savedRefreshToken != null) {
+      _currentToken =
+          Token(accessToken: savedAccessToken, refreshToken: savedRefreshToken);
+    }
+
     return _currentToken;
   }
 }
