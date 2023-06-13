@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:simblue/utils/datetime.dart';
-import 'package:simblue/widgets/tag.dart';
+import 'package:simblue/widgets/shared/tag.dart';
 
-import '../models/tag.dart';
-import '../shared/colors.dart';
+import '../../models/tag.dart';
+import '../../shared/colors.dart';
 
 class ApplicationWidget extends StatelessWidget {
   final String emoji;

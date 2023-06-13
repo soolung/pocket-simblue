@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:simblue/widgets/home.dart';
-import 'package:simblue/widgets/look.dart';
-import 'package:simblue/widgets/profile.dart';
-import 'package:simblue/widgets/record.dart';
+import 'package:simblue/widgets/root/home.dart';
+import 'package:simblue/widgets/root/look.dart';
+import 'package:simblue/widgets/root/profile.dart';
+import 'package:simblue/widgets/root/record.dart';
 import 'package:simblue/modules/root/controller.dart';
 import 'package:simblue/shared/colors.dart';
-import 'package:simblue/widgets/logo_app_bar.dart';
+import 'package:simblue/widgets/shared/logo_app_bar.dart';
 
 class RootPage extends GetView<RootController> {
   RootPage({Key? key}) : super(key: key);

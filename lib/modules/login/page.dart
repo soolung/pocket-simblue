@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:logger/logger.dart';
 import 'package:simblue/interfaces/auth.dart';
 import 'package:simblue/modules/login/controller.dart';
-import 'package:simblue/widgets/logo_app_bar.dart';
+import 'package:simblue/widgets/shared/logo_app_bar.dart';
 
 import '../../shared/colors.dart';
 
