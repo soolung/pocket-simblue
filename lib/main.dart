@@ -12,7 +12,7 @@ void main() async {
   runApp(GetMaterialApp(
     title: '심청이',
     theme: SimblueThemeData.lightThemeData,
-    initialRoute: loggedIn ? Routes.home : Routes.login,
+    initialRoute: loggedIn ? Routes.root : Routes.login,
     getPages: Pages.pages,
   ));
 }

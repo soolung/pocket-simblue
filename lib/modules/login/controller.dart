@@ -6,9 +6,8 @@ class LoginController extends GetxController {
 
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
-  String get email => emailController.text;
-  String get password => passwordController.text;
 
-  void changeIndex(int index) {
-  }
+  String get email => emailController.text;
+
+  String get password => passwordController.text;
 }
