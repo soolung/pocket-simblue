@@ -1,4 +1,4 @@
-import 'package:simblue/pages/root/controller.dart';
+import 'package:simblue/modules/root/controller.dart';
 import 'package:get/get.dart';
 
 class RootBinding extends Bindings {

@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:simblue/pages/home.dart';
-import 'package:simblue/pages/look.dart';
-import 'package:simblue/pages/profile.dart';
-import 'package:simblue/pages/record.dart';
-import 'package:simblue/pages/root/controller.dart';
+import 'package:simblue/widgets/home.dart';
+import 'package:simblue/widgets/look.dart';
+import 'package:simblue/widgets/profile.dart';
+import 'package:simblue/widgets/record.dart';
+import 'package:simblue/modules/root/controller.dart';
 import 'package:simblue/shared/colors.dart';
 import 'package:simblue/widgets/logo_app_bar.dart';
 
-class RootView extends GetView<RootController> {
-  RootView({Key? key}) : super(key: key);
+class RootPage extends GetView<RootController> {
+  RootPage({Key? key}) : super(key: key);
 
   final List<Widget> _tabList = <Widget>[
     const HomeScreen(),
@@ -21,7 +21,7 @@ class RootView extends GetView<RootController> {
   @override
   Widget build(BuildContext context) {
     return Obx(() => Scaffold(
-          appBar: LogoAppBar(),
+          appBar: const LogoAppBar(),
           body: Stack(
             children: [
               _tabList.elementAt(controller.selectedIndex.value),

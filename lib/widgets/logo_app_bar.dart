@@ -4,12 +4,17 @@ import '../shared/colors.dart';
 import 'logo.dart';
 
 class LogoAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const LogoAppBar({Key? key}) : super(key: key);
+  final Color color;
+
+  const LogoAppBar({
+    Key? key,
+    this.color = Palette.gray50,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Palette.gray50,
+      backgroundColor: color,
       elevation: 0,
       centerTitle: false,
       titleSpacing: 24,

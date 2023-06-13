@@ -1,7 +1,9 @@
 import 'package:get/get.dart';
-import 'package:simblue/pages/login/view.dart';
-import 'package:simblue/pages/root/binding.dart';
-import 'package:simblue/pages/root/view.dart';
+import 'package:simblue/modules/login/page.dart';
+import 'package:simblue/modules/root/binding.dart';
+import 'package:simblue/modules/root/page.dart';
+
+import '../modules/login/binding.dart';
 
 part 'routes.dart';
 
@@ -9,12 +11,13 @@ class Pages {
   static List<GetPage> pages = [
     GetPage(
       name: Routes.home,
-      page: () => RootView(),
+      page: () => RootPage(),
       binding: RootBinding(),
     ),
     GetPage(
       name: Routes.login,
-      page: () => LoginView(),
+      page: () => LoginPage(),
+      binding: LoginBinding(),
     ),
   ];
 }
