@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:simblue/modules/root/controller.dart';
 import 'package:simblue/shared/colors.dart';
-import 'package:simblue/widgets/shared/logo_app_bar.dart';
 
 class RootPage extends GetView<RootController> {
   const RootPage({Key? key}) : super(key: key);
@@ -10,7 +9,6 @@ class RootPage extends GetView<RootController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const LogoAppBar(),
       body: Stack(
         children: [
           Obx(() => controller.pages.elementAt(controller.selectedIndex.value)),
@@ -52,8 +50,7 @@ class RootPage extends GetView<RootController> {
                                 label: '프로필',
                               ),
                             ],
-                          )
-                      ),
+                          )),
                     ),
                   ),
                 )),

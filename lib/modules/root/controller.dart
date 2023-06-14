@@ -4,6 +4,7 @@ import 'package:simblue/modules/home/page.dart';
 import 'package:simblue/modules/look/page.dart';
 import 'package:simblue/modules/profile/page.dart';
 import 'package:simblue/modules/record/page.dart';
+import 'package:simblue/routes/pages.dart';
 
 
 class RootController extends GetxController {
@@ -13,7 +14,7 @@ class RootController extends GetxController {
 
   void changeIndex(int index) {
     if (index == 1) {
-      Get.toNamed('/look');
+      Get.toNamed(Routes.look);
       return;
     }
 

@@ -10,4 +10,11 @@ class LoginController extends GetxController {
   String get email => emailController.text;
 
   String get password => passwordController.text;
+
+  @override
+  void dispose() {
+    emailController.dispose();
+    passwordController.dispose();
+    super.dispose();
+  }
 }
