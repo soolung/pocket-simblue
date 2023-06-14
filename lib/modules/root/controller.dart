@@ -12,13 +12,18 @@ class RootController extends GetxController {
   final RxInt selectedIndex = 0.obs;
 
   void changeIndex(int index) {
+    if (index == 1) {
+      Get.toNamed('/look');
+      return;
+    }
+
     selectedIndex(index);
   }
 
   var pages = <Widget>[
-    HomePage(),
-    LookPage(),
-    RecordPage(),
-    ProfilePage(),
+    const HomePage(),
+    const LookPage(),
+    const RecordPage(),
+    const ProfilePage(),
   ];
 }
