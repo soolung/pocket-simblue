@@ -4,7 +4,7 @@ import 'package:simblue/utils/datetime.dart';
 import 'package:simblue/widgets/shared/tag.dart';
 
 import '../../models/tag.dart';
-import '../../shared/colors.dart';
+import '../../theme/colors.dart';
 
 class ApplicationWidget extends StatelessWidget {
   final Application application;

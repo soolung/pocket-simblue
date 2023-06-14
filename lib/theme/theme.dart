@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../shared/colors.dart';
+import 'colors.dart';
 
 class SimblueThemeData {
   static ThemeData lightThemeData = themeData();

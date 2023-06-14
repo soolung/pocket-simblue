@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:simblue/modules/look/controller.dart';
-import 'package:simblue/shared/colors.dart';
+import 'package:simblue/theme/colors.dart';
 import 'package:simblue/widgets/home/application.dart';
 import 'package:simblue/widgets/shared/border_bottom_tab.dart';
 import 'package:simblue/widgets/shared/title_app_bar.dart';

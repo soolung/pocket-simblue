@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:simblue/models/user.dart';
-import 'package:simblue/shared/colors.dart';
+import 'package:simblue/theme/colors.dart';
 
 class ProfileWidget extends StatelessWidget {
   final User user;

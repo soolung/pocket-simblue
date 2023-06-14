@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:simblue/shared/colors.dart';
+import 'package:simblue/theme/colors.dart';
 
 class BorderBottomTab extends StatelessWidget {
   final String text;

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../shared/colors.dart';
+import '../../theme/colors.dart';
 import 'logo.dart';
 
 class LogoAppBar extends StatelessWidget implements PreferredSizeWidget {

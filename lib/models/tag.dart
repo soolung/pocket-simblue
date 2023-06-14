@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-import 'package:simblue/shared/colors.dart';
+import 'package:simblue/theme/colors.dart';
 
 class Tag {
   String text;

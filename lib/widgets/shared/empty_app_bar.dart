@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../shared/colors.dart';
+import '../../theme/colors.dart';
 
 class EmptyAppBar extends StatelessWidget implements PreferredSizeWidget {
   final Color color;

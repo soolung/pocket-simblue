@@ -3,7 +3,7 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get/get.dart';
 import 'package:simblue/interfaces/auth.dart';
 import 'package:simblue/routes/pages.dart';
-import 'package:simblue/theme/simblue_theme.dart';
+import 'package:simblue/theme/theme.dart';
 import 'package:simblue/utils/dio.dart';
 
 void main() async {

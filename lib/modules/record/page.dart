@@ -7,6 +7,10 @@ class RecordPage extends GetView<RecordController> {
 
   @override
   Widget build(BuildContext context) {
-    return const Text("record");
+    return const Scaffold(
+      body: Center(
+        child: Text("히힛쿵 ^^;"),
+      ),
+    );
   }
 }

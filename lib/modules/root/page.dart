@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:simblue/modules/root/controller.dart';
-import 'package:simblue/shared/colors.dart';
+import 'package:simblue/theme/colors.dart';
 
 class RootPage extends GetView<RootController> {
   const RootPage({Key? key}) : super(key: key);

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:simblue/interfaces/auth.dart';
 import 'package:simblue/modules/login/controller.dart';
-import 'package:simblue/shared/colors.dart';
+import 'package:simblue/theme/colors.dart';
 import 'package:simblue/widgets/shared/logo_app_bar.dart';
 
 class LoginPage extends GetView<LoginController> {
