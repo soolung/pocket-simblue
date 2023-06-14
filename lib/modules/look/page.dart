@@ -12,26 +12,31 @@ class LookPage extends GetView<LookController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: const TitleAppBar(title: "둘러보기"),
+        appBar: TitleAppBar(
+          title: "둘러보기",
+          bottom: Obx(() => Container(
+                decoration: const BoxDecoration(
+                    border: Border(
+                        bottom: BorderSide(
+                            color: Palette.gray100,
+                            width: 1,
+                            style: BorderStyle.solid))),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                  child: Row(
+                    children: controller.tabList
+                        .map((e) => BorderBottomTab(
+                            text: e,
+                            isSelected: controller.selectedType.value == e,
+                            onTap: () => controller.changeType(e)))
+                        .toList(),
+                  ),
+                ),
+              )),
+        ),
         body: SingleChildScrollView(
             scrollDirection: Axis.vertical,
-            physics: const ClampingScrollPhysics(),
             child: Column(children: [
-              Container(
-                  decoration: const BoxDecoration(
-                    color: Palette.monoWhite,
-                  ),
-                  child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                      child: Obx(() => Row(
-                            children: controller.tabList
-                                .map((e) => BorderBottomTab(
-                                    text: e,
-                                    isSelected:
-                                        controller.selectedType.value == e,
-                                    onTap: () => controller.changeType(e)))
-                                .toList(),
-                          )))),
               const SizedBox(
                 height: 8.0,
               ),
@@ -40,7 +45,7 @@ class LookPage extends GetView<LookController> {
                     color: Palette.monoWhite,
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.only(top: 4.0),
+                    padding: const EdgeInsets.only(top: 8.0),
                     child: Obx(
                       () => Column(
                         crossAxisAlignment: CrossAxisAlignment.start,

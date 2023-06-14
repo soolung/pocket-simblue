@@ -5,11 +5,10 @@ import '../../shared/colors.dart';
 
 class TitleAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
+  final Widget? bottom;
 
-  const TitleAppBar({
-    Key? key,
-    required this.title,
-  }) : super(key: key);
+  const TitleAppBar({Key? key, required this.title, this.bottom})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,18 +16,18 @@ class TitleAppBar extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: Palette.monoWhite,
       elevation: 0,
       centerTitle: false,
-      title: Column(
+      title: Row(
         children: [
-          Row(
-            children: [
-              IconButton(
-                  onPressed: () => Get.back(),
-                  icon: const Icon(Icons.arrow_back_ios_new,
-                      color: Palette.monoBlack, size: 20.0)),
-              Text(title, style: Theme.of(context).textTheme.labelLarge),
-            ],
-          ),
+          IconButton(
+              onPressed: () => Get.back(),
+              icon: const Icon(Icons.arrow_back_ios_new,
+                  color: Palette.monoBlack, size: 20.0)),
+          Text(title, style: Theme.of(context).textTheme.labelLarge),
         ],
+      ),
+      bottom: PreferredSize(
+        preferredSize: const Size(double.infinity, kToolbarHeight),
+        child: bottom ?? const SizedBox.shrink(),
       ),
       automaticallyImplyLeading: false,
       titleSpacing: 0,
@@ -36,5 +35,5 @@ class TitleAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
+  Size get preferredSize => const Size.fromHeight(80);
 }
