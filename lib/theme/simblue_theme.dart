@@ -18,9 +18,9 @@ class SimblueThemeData {
 
   static TextTheme _buildSimblueTextTheme(TextTheme base) {
     return base.copyWith(
-      headlineLarge: const TextStyle(fontSize: 32, fontWeight: FontWeight.w500, color: Palette.monoBlack),
-      headlineMedium: const TextStyle(fontSize: 28, fontWeight: FontWeight.w500, color: Palette.monoBlack),
-      headlineSmall: const TextStyle(fontSize: 24, fontWeight: FontWeight.w500, color: Palette.monoBlack),
+      headlineLarge: const TextStyle(fontSize: 28, fontWeight: FontWeight.w500, color: Palette.monoBlack),
+      headlineMedium: const TextStyle(fontSize: 24, fontWeight: FontWeight.w500, color: Palette.monoBlack),
+      headlineSmall: const TextStyle(fontSize: 20, fontWeight: FontWeight.w500, color: Palette.monoBlack),
       labelLarge: const TextStyle(fontSize: 18, fontWeight: FontWeight.w500, color: Palette.monoBlack),
       labelMedium: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: Palette.monoBlack),
       labelSmall: const TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: Palette.monoBlack),

@@ -17,13 +17,17 @@ class TitleAppBar extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: Palette.monoWhite,
       elevation: 0,
       centerTitle: false,
-      title: Row(
+      title: Column(
         children: [
-          IconButton(
-              onPressed: () => Get.back(),
-              icon: const Icon(Icons.arrow_back_ios_new,
-                  color: Palette.monoBlack, size: 20.0)),
-          Text(title, style: Theme.of(context).textTheme.labelLarge),
+          Row(
+            children: [
+              IconButton(
+                  onPressed: () => Get.back(),
+                  icon: const Icon(Icons.arrow_back_ios_new,
+                      color: Palette.monoBlack, size: 20.0)),
+              Text(title, style: Theme.of(context).textTheme.labelLarge),
+            ],
+          ),
         ],
       ),
       automaticallyImplyLeading: false,

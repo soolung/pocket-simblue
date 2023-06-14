@@ -1,23 +1,35 @@
 import 'package:get/get.dart';
+import 'package:simblue/interfaces/application.dart';
+import 'package:simblue/models/application.dart';
 
 class LookController extends GetxController {
   static LookController get to => Get.find();
 
-  final RxInt selectedIndex = 0.obs;
+  final RxString selectedType = "마감 임박".obs;
 
-  final tabList = <String>[
-    "마감 임박",
-    "최신",
-    "상시"
-  ];
+  final RxList<Application> applicationList = <Application>[].obs;
 
-  final applicationTypeList = <String>[
-    "deadline",
-    "latest",
-    "always"
-  ];
+  final tabList = <String>["마감 임박", "최신", "상시"];
 
-  void changeIndex(int index) {
-    selectedIndex(index);
+  final applicationTypeMap = <String, String> {
+    "마감 임박": "deadline",
+    "최신": "latest",
+    "상시": "always"
+  };
+
+  void changeType(String type) {
+    selectedType.value = type;
+    fetchList();
+  }
+
+  void fetchList() async {
+    var list = await applicationApi.getApplication(applicationTypeMap[selectedType.value]!);
+    applicationList.value = list;
+  }
+
+  @override
+  void onInit() {
+    fetchList();
+    super.onInit();
   }
 }

@@ -36,14 +36,7 @@ class HomePage extends GetView<HomeController> {
               padding: const EdgeInsets.only(top: 28, left: 24, right: 24),
               child: Column(
                   children: controller.applicationList
-                      .map((a) => ApplicationWidget(
-                            emoji: a.emoji,
-                            title: a.title,
-                            description: a.description,
-                            status: a.status,
-                            startDate: a.startDate,
-                            endDate: a.endDate,
-                          ))
+                      .map((a) => ApplicationWidget(a))
                       .toList()),
             )
           ],
