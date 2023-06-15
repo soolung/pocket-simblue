@@ -5,7 +5,7 @@ class DateTimeFormatter {
     final now = DateTime.now();
     final diff = date.difference(now);
 
-    if (diff.inSeconds < 30) return "방금";
+    if (diff.inSeconds < 30) return "이따";
     if (diff.inSeconds < 60) return "1분 후";
     if (diff.inMinutes < 60) return "${diff.inMinutes.floor()}분 후";
     if (diff.inHours < 24) return "${diff.inHours.floor()}시간 후";
